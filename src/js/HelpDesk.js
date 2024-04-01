@@ -13,18 +13,14 @@ export default class HelpDesk {
     this.addTicketForm = document.querySelector('.add_ticket_form');
     this.updateTicketForm = document.querySelector('.update_ticket_form');
     this.viewNewTicket = this.viewNewTicket.bind(this);
-    this.getAllTicketsDescription = this.getAllTicketsDescription.bind(this);
-    this.updateAllTickets = this.updateAllTickets.bind(this);
-    this.changeAllTicketsStatus = this.changeAllTicketsStatus.bind(this);
-    this.deleteAllTickets = this.deleteAllTickets.bind(this);
   }
 
   init() {
     this.ticketService.list(this.viewTickets);
-    this.ticketService.list(this.getAllTicketsDescription);
-    this.ticketService.list(this.deleteAllTickets);
-    this.ticketService.list(this.updateAllTickets);
-    this.ticketService.list(this.changeAllTicketsStatus);
+    this.updateAllTickets();
+    this.deleteAllTickets();
+    this.changeAllTicketsStatus();
+    this.getAllTicketsDescription();
     this.newTicketForm();
   }
 
@@ -74,9 +70,11 @@ export default class HelpDesk {
   }
 
   changeAllTicketsStatus() {
-    document.querySelectorAll('.ticket_status').forEach(checkbox => {
-      this.changeTicketStatus(checkbox);
-    })
+    setTimeout(() => {
+      document.querySelectorAll('.ticket_status').forEach(checkbox => {
+        this.changeTicketStatus(checkbox);
+      })
+    }, 10)
   }
   
   getTicketDescription(ticket) {
@@ -88,9 +86,11 @@ export default class HelpDesk {
   }
 
   getAllTicketsDescription() {
-    document.querySelectorAll('.ticket_text').forEach(ticket => {
-      this.getTicketDescription(ticket);
-    })
+    setTimeout(() => {
+      document.querySelectorAll('.ticket_text').forEach(ticket => {
+        this.getTicketDescription(ticket);
+      })
+    }, 10)
   }
 
   viewChanges(id, tickets) {
@@ -126,9 +126,11 @@ export default class HelpDesk {
   }
 
   updateAllTickets() {
-    document.querySelectorAll('.ticket_edit_button').forEach(button => {
-      this.updateTicket(button);
-    })
+    setTimeout(() => {
+      document.querySelectorAll('.ticket_edit_button').forEach(button => {
+        this.updateTicket(button);
+      })
+    }, 10)
   }
 
   deleteTicket(button) {
@@ -140,8 +142,11 @@ export default class HelpDesk {
   }
 
   deleteAllTickets() {
-    document.querySelectorAll('.ticket_delete_button').forEach(button => {
-      this.deleteTicket(button);
-    })
+    setTimeout(() => {
+      document.querySelectorAll('.ticket_delete_button').forEach(button => {
+        this.deleteTicket(button);
+      })
+    }, 10)
   }
+
 }
