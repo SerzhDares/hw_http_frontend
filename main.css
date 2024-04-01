@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add_button {
+    font-size: 18px;
+    background-color: rgb(9, 95, 19);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+.add_button:hover {
+    background-color: rgb(9, 139, 24);
+}
+
+.add_ticket_form,
+.update_ticket_form {
+    background-color: rgb(235, 240, 240);
+    width: 400px;
+    position: absolute;
+    top: 70px;
+    left: 540px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(185, 182, 182);
+    font-size: 25px;
+}
+
+.form_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.field_label {
+    margin-bottom: 10px;
+}
+
+.form_input {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form_button {
+    margin-left: 10px;
+}
+
+.form_visible,
+.description_visible {
+    display: none;
+}
+
+.tickets_container {
+    width: calc(100% - 200px);
+    margin: 30px 100px;
+    position: relative;
+}
+
+.ticket {
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgb(235, 240, 240);
+    border-radius: 5px;
+    border: 1px solid rgb(185, 182, 182);
+}
+
+.ticket_status {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.ticket_text {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ticket_date {
+    font-size: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.ticket_date_buttons {
+    margin-left: auto;
+}
+
+.ticket_edit_button,
+.ticket_delete_button,
+.form_button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.ticket_edit_button:hover,
+.ticket_delete_button:hover,
+.form_button:hover {
+    background-color: rgb(184, 182, 179);
+}
